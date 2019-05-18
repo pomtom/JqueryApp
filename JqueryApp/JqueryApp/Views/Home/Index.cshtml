@@ -8,12 +8,14 @@
 
 
 <div class="jumbotron">
-    <input type="button" id="btnAdd" name="btnAdd" value="Add Employee" />
+    <input type="button" id="btnAdd" name="btnAdd" value="Add Employee" class="btn btn-default" />
 </div>
 
-<div id="createview">
-    @*@{Html.RenderAction("_AddEmployee");}*@
+<div id="dialog" title="Add Employee">
+
 </div>
+
+@*@{Html.RenderAction("_AddEmployee");}*@
 
 <div class="row">
     <table class="table">
@@ -36,3 +38,4 @@
         }
     </table>
 </div>
+

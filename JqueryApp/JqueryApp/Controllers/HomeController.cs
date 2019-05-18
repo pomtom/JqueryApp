@@ -17,6 +17,17 @@ namespace JqueryApp.Controllers
             return PartialView("~/Views/Home/_AddEmployee.cshtml", new Employee());
         }
 
+        [HttpPost]
+        public ActionResult AddEmployee(Employee emp)
+        {
+            using (EmployeeDBContext ctx = new EmployeeDBContext())
+            {
+                ctx.Employees.Add(emp);
+                ctx.SaveChanges();
+            }
+            return RedirectToAction("Index"); 
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

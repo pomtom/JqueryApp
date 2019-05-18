@@ -6,7 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
     
+
 
 </head>
 <body>
@@ -41,5 +43,21 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/employee")
     @RenderSection("scripts", required: false)
+
+
 </body>
 </html>
+<script type="text/javascript">
+    $(function () {
+        $("#dialog").dialog({
+            autoOpen: false,
+            show: {
+                effect: "Toggle",//slide,Puff,Pulsate,Fold,Fade,Explode,Easings,Drop,Clip,Bounce,Blind,Scale,Toggle,Trasfer
+            },
+            hide: {
+                effect: "Toggle",
+            },
+            width : 400
+        });
+    });
+</script>
